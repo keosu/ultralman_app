@@ -30,13 +30,13 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
 
-      - uses: borales/actions-yarn@v3
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
         with:
-          cmd: install
+          version: 8
 
-      - uses: borales/actions-yarn@v3
-        with:
-          cmd: build
+      - name: Install app dependencies
+        run: pnpm install && pnpm run build
 
       - name: Setup Pages
         uses: actions/configure-pages@v3

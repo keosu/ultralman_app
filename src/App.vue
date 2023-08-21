@@ -24,7 +24,7 @@ const init = () => {
   let option = {
     title: { text: '人民的名义关系图谱' },
     tooltip: {
-      formatter: function (x) {
+      formatter: function (x: any) {
         return x.data.des;
       }
     },
@@ -39,7 +39,7 @@ const init = () => {
         edgeLabel: {
           normal: {
             show: true,
-            formatter: function (x) {
+            formatter: function (x: any) {
               return x.data.name;
             },
             textStyle: {
