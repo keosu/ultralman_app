@@ -1,4 +1,4 @@
-name: Generate Android Development APK
+name: Android Dev APK
 
 on:
   push: 
